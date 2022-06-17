@@ -1,0 +1,21 @@
+.content{
+    display: flex;
+    flex-direction: column;
+    width: 343px;
+    height: 429px;
+    border: 1px solid black;
+}
+.img{
+    width: 343px;
+    height: 230px;
+    background-color: aquamarine;
+}
+.avatar{
+    position: absolute;
+    width: 38px;
+    height: 38px;
+    background-color: blue;
+    border-radius: 50%;
+    left: 310px;
+    top: 335px;
+}
