@@ -5,15 +5,32 @@ import "./content.css"
 
 
 class Content extends React.Component{
+    constructor(props){
+        super(props)
+        this.state = {
+            count : 1,
+            price: 7500
+        }
+    }
     render() {
+        
+        const plus = ()=>{
+            
+            this.setState({count: 1 + this.state.count})
+            this.setState({price: 7500 + this.state.price})
+        }
+        const minus = ()=>{
+            if(this.state.count > 1) this.setState({count:  this.state.count - 1 })
+            if(this.state.price > 7500)this.setState({price: this.state.price - 7500})
+        }
         return (
              <div className="content">
                 <div className="img">
-                   
+                <img src={this.props} className="img"/>
                 </div>
                 <div className="malumotlar">
                     <div className="avatar">
-                        
+                        <img src=""></img>
                     </div>
                     <div className="title">
                         <h3>New Apartment Nice Wiew</h3>
@@ -40,12 +57,12 @@ class Content extends React.Component{
                 </div>
                 <div className="footer">
                     <div className="pirice">
-                        <h4>$7,500/mo</h4>
+                        <h4>${this.state.price}/mo</h4>
                     </div>
                     <div className="btn">
-                        <button>+</button>
-                        <h4>1</h4>
-                        <button>-</button>
+                        <button onClick={plus}>+</button>
+                        <h4>{this.state.count}</h4>
+                        <button onClick={minus}>-</button>
                     </div>
                 </div>
              </div>
