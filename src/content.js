@@ -1,6 +1,10 @@
 import React from "react";
 import "./content.css"
 
+// import svg1 from '../src/svg/baths-image.svg'
+// import svg2 from '../src/svg/bed-image.svg'
+// import svg3 from '../src/svg/car-image.svg'
+// import svg4 from '../src/svg/cursor.svg'
 
 
 
@@ -26,11 +30,11 @@ class Content extends React.Component{
         return (
              <div className="content">
                 <div className="img">
-                <img src={this.props} className="img"/>
+                    <img src={this.props.data.img} className="img"/>
                 </div>
                 <div className="malumotlar">
                     <div className="avatar">
-                        <img src=""></img>
+                    <img src={this.props.data.avatarimg} className="userimg"/>
                     </div>
                     <div className="title">
                         <h3>New Apartment Nice Wiew</h3>
@@ -38,19 +42,19 @@ class Content extends React.Component{
                     </div>
                     <div className="itemlar">
                         <div className="data">
-                            <div>rasm</div>
+                           <div> <img src={this.props.data.like}/></div>
                             <p>4 Beds</p>
                         </div>
                         <div className="data">
-                            <div>rasm</div>
+                           <div> <img src={this.props.data.tualet}/></div>
                             <p>5 Baths</p>
                         </div>
                         <div className="data">
-                            <div>rasm</div>
+                           <div> <img src={this.props.data.car}/></div>
                             <p>1 Carage</p>
                         </div>
                         <div className="data">
-                            <div>rasm</div>
+                            <div><img src={this.props.data.razmer}/></div>
                             <p>1200 Sq Ft</p>
                         </div>
                     </div>    

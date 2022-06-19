@@ -4,3 +4,10 @@
   text-align: center;
   margin-bottom: 50px;
 }
+.con{
+
+  display: flex;
+  justify-content: space-around;
+  
+  
+}

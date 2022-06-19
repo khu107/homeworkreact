@@ -22,6 +22,9 @@
     top: 212px;
     border: 2px solid white;
 }
+.userimg{
+    border-radius: 40%;
+}
 
 .title{
     
